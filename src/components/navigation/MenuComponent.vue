@@ -1,19 +1,19 @@
 <template>
   <v-container class="anden-nav">
-    <router-link to="/transportComponent" @click="setActive('transportComponent')">
-      <img :class="{ active: activeImage === 'transportComponent' }" src="@/images/transport.svg" />
+    <router-link :to="{ name: 'ChecklistPage', params: { categoryId: 2 } }" @click="setActive('transport')">
+      <img :class="{ active: activeImage === 'transport' }" src="@/images/transport.svg" />
     </router-link>
 
-    <router-link to="/elUse" @click="setActive('elUse')">
-      <img :class="{ active: activeImage === 'elUse' }" src="@/images/El-forbruge.svg" />
+    <router-link :to="{ name: 'ChecklistPage', params: { categoryId: 1 } }" @click="setActive('eluse')">
+      <img :class="{ active: activeImage === 'eluse' }" src="@/images/eluse.svg" />
     </router-link>
 
-    <router-link to="/genbrugeComponent" @click="setActive('genbrugeComponent')">
-      <img :class="{ active: activeImage === 'genbrugeComponent' }" src="@/images/Genbruge.svg" />
+    <router-link :to="{ name: 'ChecklistPage', params: { categoryId: 3 } }" @click="setActive('foodwaste')">
+      <img :class="{ active: activeImage === 'foodwaste' }" src="@/images/foodwaste.svg" />
     </router-link>
 
-    <router-link to="/foodWaste" @click="setActive('foodWaste')">
-      <img :class="{ active: activeImage === 'foodWaste' }" src="@/images/Madspile.svg" />
+    <router-link :to="{ name: 'ChecklistPage', params: { categoryId: 4 } }" @click="setActive('usedthing')">
+      <img :class="{ active: activeImage === 'usedthing' }" src="@/images/usedthing.svg" />
     </router-link>
   </v-container>
 </template>
@@ -39,8 +39,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
-
 .anden-nav {
   display: flex;
   justify-content: space-around;
