@@ -34,7 +34,7 @@ export default {
   },
   props: {
     categoryId: {
-      type: [Number, String],
+      type: Number,
       required: true,
     },
   },
@@ -69,13 +69,13 @@ export default {
   },
   methods: {
     async initializePage() {
-      const categoryId = Number(this.categoryId); // Ensure categoryId is a number
+      const categoryId = this.categoryId; // Ensure categoryId is a number
       console.log('Category ID:', categoryId);
       const categories = {
         1: {
           title: 'Elforbrug',
-          next: '/genbrugeComponent',
-          prev: '/transportComponent',
+          next: '/transportComponent',
+          prev: '/frontPage',
           style: { backgroundColor: '#000', color: '#1E7F85' },
         },
         2: {
@@ -86,7 +86,7 @@ export default {
         },
         3: {
           title: 'Madspild',
-          next: '/usedthing',
+          next: '/genbrugeComponent',
           prev: '/transport',
           style: { backgroundColor: '#000', color: '#E59182' },
         },
