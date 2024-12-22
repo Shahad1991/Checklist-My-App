@@ -1,11 +1,10 @@
 <template>
   <v-container class="anden-nav">
-    <router-link :to="{ name: 'ChecklistPage', params: { categoryId: 2 } }" @click="setActive('transport')">
-      <img :class="{ active: activeImage === 'transport' }" src="@/images/transport.svg" />
-    </router-link>
-
     <router-link :to="{ name: 'ChecklistPage', params: { categoryId: 1 } }" @click="setActive('eluse')">
       <img :class="{ active: activeImage === 'eluse' }" src="@/images/eluse.svg" />
+    </router-link>
+    <router-link :to="{ name: 'ChecklistPage', params: { categoryId: 2 } }" @click="setActive('transport')">
+      <img :class="{ active: activeImage === 'transport' }" src="@/images/transport.svg" />
     </router-link>
 
     <router-link :to="{ name: 'ChecklistPage', params: { categoryId: 3 } }" @click="setActive('foodwaste')">
