@@ -15,7 +15,7 @@
         <ul>
           <li @click="navigateTo('/frontPage')">Min side</li>
           <li @click="navigateTo('/userPage')">Min træ</li>
-          <li @click="navigateTo('/info')">Info</li>
+          <li @click="navigateTo('/infoComponent')">Info</li>
           <li @click="logout">Log ud</li>
         </ul>
       </aside>

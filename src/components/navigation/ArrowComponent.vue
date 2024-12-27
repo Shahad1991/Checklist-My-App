@@ -37,28 +37,34 @@ export default {
 
 <style scoped>
 .navigation-container {
-  width: 100%; /* Fuld bredde */
-  background-color: white; /* Baggrundsfarve */
-  padding: 10px; /* Tilføj padding for at give lidt plads omkring elementerne */
-  margin: 10px 0; /* Tilføj margin for at give lidt plads omkring elementet */
+  width: 100%; /* Full width */
+  background-color: black; /* Background color */
+  padding: 10px; /* Add padding for some space around the elements */
+  margin: 10px 0; /* Add margin for some space around the element */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.5); /* Add shadow to indicate clickability */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+.navigation-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.7); /* Darker shadow on hover */
 }
 
 .navigation-col {
   display: flex;
   align-items: center;
-
-
 }
 
 .navigation-text {
-  color: green; /* Tekstfarve */
+  color: green; /* Text color */
   font-size: 16px;
-  margin: 0 8px; /* Tilføj margin for at give lidt plads omkring teksten */
+  margin: 0 8px; /* Add margin for some space around the text */
   font-weight: bold;
 }
-.navigation-text1{
+
+.navigation-text1 {
   color: #76B624;
 }
+
 .arrow-icon {
   width: 16px;
   height: 16px;
