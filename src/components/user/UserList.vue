@@ -18,7 +18,7 @@
    <br/><br/><br/><br/>
    <v-col cols="auto" class="navigation-col" @click="goToPrevious" style="display: flex; align-items: center;">
       <img src="@/Images/arrow left.svg" alt="Arrow left" @click="tilbage" style="width: 30px; cursor: pointer; margin-right: 10px;"/>
-      <span class="navigation-text1" style="font-size: 20px;">forrige</span>
+      <span class="navigation-text1" style="font-size: 20px;">tilbage</span>
    </v-col>
  </v-container>
 </template>
