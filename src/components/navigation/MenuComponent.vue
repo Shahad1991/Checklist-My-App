@@ -55,7 +55,7 @@ export default defineComponent({
   margin-bottom: 70px;
   transition: all 0.3s ease;
   border-radius: 100px;
-  
+
 }
 
 .active {

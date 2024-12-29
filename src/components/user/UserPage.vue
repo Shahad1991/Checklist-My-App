@@ -1,12 +1,11 @@
 <template>
   <NavComponent/>
-  <v-container :style="{ backgroundColor: '#000' }">
+  <v-container :style="{ background: '#000 url(@/images/forside.svg)', backgroundSize: 'cover', backgroundPosition: 'center' }">
     <br/>
     <br/><br/><br/><br/>
-    <h1 class="score-title">Dagens score</h1>
+    <h1 class="score-title">Godt Klaret!</h1>
     <br/>
     <v-col cols="12" class="text-center">
-      <h2 class="question">Godt Klaret </h2><br/>
       <p class="description-text"> {{ userName }}</p>
       <br/>
       <LevelDisplay />
@@ -45,8 +44,11 @@
     <v-container class="carbon-reduction">
       <v-row align="center" justify="center">
         <v-col cols="12" class="text-center"><br/><br/><br/>
-          <v-btn rounded="xl" size="x-large" @click="saveUserData" class="home-button" block :style="{background:'#3E7A00'}">Gem data</v-btn><br/>
-          <v-btn rounded="xl" size="x-large" @click="showUserList" class="back-button" block outlined :style="{border:'5px solid #3E7A00', background:'#fff'}">Show users</v-btn><br/>
+          <v-btn rounded="xl" size="x-large" @click="saveUserData" class="home-button" block :style="{background:'#3E7A00'}">
+            <img src="@/images/drop.svg" alt="Drop Icon" class="drop-icon" />
+            Vand dit træ
+          </v-btn><br/>
+          <v-btn rounded="xl" size="x-large" @click="showUserList" class="back-button" block outlined :style="{border:'5px solid #3E7A00', background:'#fff'}">Se andres fremskridt</v-btn><br/>
         </v-col>
       </v-row>
     </v-container>
@@ -172,6 +174,8 @@ export default {
 }
 .question {
   color: #ffffff; /* Changed to white for better visibility */
+  font-weight: lighter;
+  padding: 20px;
 }
 .description-text {
   color: #3E7A00;
@@ -197,7 +201,7 @@ export default {
 
 .overlay-text {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -231,6 +235,12 @@ export default {
 
 .eco {
   max-width: 160px;
+}
+
+.drop-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
   .score-title {

@@ -81,7 +81,7 @@ export default {
 
 
    const goToMainSite = () => {
-     router.push('/TransportComponent');
+     router.push('/elUse');
    };
 
 

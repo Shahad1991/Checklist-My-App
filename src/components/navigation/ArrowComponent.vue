@@ -40,15 +40,10 @@ export default {
   width: 100%; /* Full width */
   background-color: black; /* Background color */
   padding: 10px; /* Add padding for some space around the elements */
-  margin: 10px 0; /* Add margin for some space around the element */
+  margin: 20px 0; /* Add margin for some space around the element */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 255, 255, 0.5); /* Add shadow to indicate clickability */
   transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
 }
-
-.navigation-container:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 255, 255, 0.7); /* Darker shadow on hover */
-}
-
 .navigation-col {
   display: flex;
   align-items: center;
@@ -63,6 +58,8 @@ export default {
 
 .navigation-text1 {
   color: #76B624;
+  font-weight: 100;
+
 }
 
 .arrow-icon {
@@ -70,3 +67,4 @@ export default {
   height: 16px;
 }
 </style>
+
