@@ -136,6 +136,7 @@ export default {
 
 .question {
   font-weight: bold;
+  font-size: 30px;
   margin-top: 15px;
   margin-bottom: 24px;
 }

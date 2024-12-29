@@ -143,6 +143,7 @@ export default {
 .welcome-text {
  font-size: 40px;
  color: #Ffff; /* Change color for h1 */
+ font-weight: lighter;
 }
 
 

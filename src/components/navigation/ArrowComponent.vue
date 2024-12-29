@@ -50,7 +50,7 @@ export default {
 }
 
 .navigation-text {
-  color: green; /* Text color */
+  color: #338936 ; /* Text color */
   font-size: 16px;
   margin: 0 8px; /* Add margin for some space around the text */
   font-weight: bold;
@@ -63,8 +63,8 @@ export default {
 }
 
 .arrow-icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 </style>
 
