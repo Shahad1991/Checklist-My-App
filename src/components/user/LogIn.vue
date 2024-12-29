@@ -165,7 +165,8 @@ h2 {
   justify-content: center;
 }
 .v-icon--size-default.v-icon--clickable {
-  background-color: #4caf50;
+  color: #fff;
+
 }
 .error-button {
   background-color: #338936 !important;

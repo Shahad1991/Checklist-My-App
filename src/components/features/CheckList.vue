@@ -1,29 +1,35 @@
 <template>
-  <v-container :style="{ width: '100%' }">
-
-
-      <v-list-item
+  <v-container>
+    <v-row>
+      <v-col
+        cols="12"
+        md="6"
+        lg="4"
         v-for="item in checklistItems"
         :key="item.id"
-        @click="selectItem(item)"
-        :class="{ 'selected': localSelectedItems.includes(item), 'disabled': localSelectedItems.length && !localSelectedItems.includes(item) }"
-        :style="itemStyle(item)"
-        class="checklist-card"
       >
-
-
-          <v-list-item-title>{{ item.name }}</v-list-item-title>
-
-
-      </v-list-item>
-
-
+        <v-list-item
+          @click="selectItem(item)"
+          :class="{
+            'selected': localSelectedItems.includes(item),
+            'disabled': localSelectedItems.length && !localSelectedItems.includes(item),
+          }"
+          class="checklist-card"
+        >
+          <div class="checklist-content">
+            <v-icon class="checkbox-icon">
+              {{ localSelectedItems.includes(item) ? 'mdi-checkbox-marked' : 'mdi-checkbox-blank-outline' }}
+            </v-icon>
+            <span class="item-text">{{ item.name }}</span>
+          </div>
+        </v-list-item>
+      </v-col>
+    </v-row>
   </v-container>
- </template>
+</template>
 
-
- <script>
- export default {
+<script>
+export default {
   props: {
     checklistItems: {
       type: Array,
@@ -51,7 +57,7 @@
   methods: {
     selectItem(item) {
       if (this.localSelectedItems.includes(item)) {
-        this.localSelectedItems = this.localSelectedItems.filter(i => i !== item);
+        this.localSelectedItems = this.localSelectedItems.filter((i) => i !== item);
       } else {
         this.localSelectedItems.push(item);
       }
@@ -61,45 +67,51 @@
       // Udsender opdaterede valgte elementer til forælderen
       this.$emit('update:selectedItems', this.localSelectedItems);
     },
-    itemStyle(item) {
-      return this.localSelectedItems.includes(item)
-        ? { backgroundColor: '#4caf50' }
-        : { backgroundColor: '#000' };
-    },
   },
- };
- </script>
+};
+</script>
 
+<style scoped>
+.v-container {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
 
- <style scoped>
- .v-container {
-  justify-content: center;
-  /* Padding inside the container */
-
-
- }
- .center-text {
-  text-align: center;
+.v-row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 35px;
- }
- .checklist-card {
-  margin: 12px 0; /* Margin for each checklist item */ /* Padding inside the card for touch */
-  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.v-col {
   display: flex;
-  height: 90px;
+}
+
+.checklist-card {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease; /* Smooth transition */
- }
- .checklist-card.selected {
-  background-color: #4caf50; /* Green color when selected */
-  color: white; /* Text color when selected */
- }
- .v-list{
-  padding:  20px;
- }
- </style>
+  padding: 12px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+
+}
+
+.checklist-card.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+.checklist-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.checkbox-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.item-text {
+  font-size: 1rem;
+}
+</style>
