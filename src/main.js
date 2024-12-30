@@ -49,7 +49,6 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
 });
-
 // Check for authentication before routing
 router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth) {
@@ -61,9 +60,7 @@ router.beforeEach((to, from, next) => {
   }
   next();
 });
-
 const app = createApp(App);
-
 app.use(router);
 app.use(store);
 app.use(vuetify);

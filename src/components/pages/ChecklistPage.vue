@@ -87,7 +87,7 @@ export default {
         3: {
           title: 'Madspild',
           next: '/genbrugeComponent',
-          prev: '/transport',
+          prev: '/transportComponent',
           style: { backgroundColor: '#000', color: '#E59182' },
         },
         4: {
@@ -136,6 +136,7 @@ export default {
 
 .question {
   font-weight: bold;
+  font-size: 30px;
   margin-top: 15px;
   margin-bottom: 24px;
 }

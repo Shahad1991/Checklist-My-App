@@ -96,7 +96,7 @@ export default {
 }
 
 .checklist-card.selected {
-  background-color: #4caf50;
+  background-color: #338936 ;
   color: white;
 }
 
@@ -112,6 +112,7 @@ export default {
 }
 
 .item-text {
-  font-size: 1rem;
+  font-size: 1.3rem;
+  font-weight: lighter;
 }
 </style>
