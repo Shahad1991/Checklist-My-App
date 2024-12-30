@@ -87,7 +87,7 @@ export default {
         3: {
           title: 'Madspild',
           next: '/genbrugeComponent',
-          prev: '/transport',
+          prev: '/transportComponent',
           style: { backgroundColor: '#000', color: '#E59182' },
         },
         4: {
